@@ -31,3 +31,13 @@ mosquitto_sub -h localhost -t test -u "mosquitto" -P "mosquitto"
 # Publish a message.
 mosquitto_pub -h localhost -t test -m "hello." -u "mosquitto" -P "mosquitto"
 ```
+
+### Troubleshooting
+
+- `mosquitto    | 1606707668: Error: Unable to open log file /mosquitto/log/mosquitto.log for writing.`
+
+Change permissions of `log` folder
+
+```bash
+sudo chmod o+w log
+```
